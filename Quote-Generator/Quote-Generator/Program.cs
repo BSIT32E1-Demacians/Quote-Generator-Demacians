@@ -1,4 +1,7 @@
-namespace Quote_Generator
+using Microsoft.EntityFrameworkCore;
+using QuoteGenerator.Data;
+
+namespace QuoteGenerator
 {
     public class Program
     {
@@ -8,6 +11,8 @@ namespace Quote_Generator
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
