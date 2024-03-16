@@ -1,4 +1,4 @@
-# Quote-Generator
+# Quote-Generator App
 
 ## User Stories and Separate Concerns for a Quote Generator in MVC
 
